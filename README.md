@@ -9,4 +9,7 @@ ______
 
 ## Script
 It requires Tcl/Tk.
-* `tclNote.tcl`
+- `tclNote.tcl`
+
+## Library list
+- unicodeTcl_proc/unicodeTcl_proc.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/688845db196c1c2edfe3dbb88b63478b
