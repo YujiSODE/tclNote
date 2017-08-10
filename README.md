@@ -8,5 +8,5 @@ https://github.com/YujiSODE/tclNote
 ______
 
 ## Script
-* `tclNote.tcl`  
 It requires Tcl/Tk.
+* `tclNote.tcl`
