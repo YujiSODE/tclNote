@@ -64,9 +64,9 @@ namespace eval ::tclNote {
 			.fileIO.saveHtml configure -command {
 				#file path in order to html output
 				regsub {\.[a-zA-Z0-9_]+$} $fPath {.html} htmlPath;
-				set htmlHead "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>tclNote_html</title></head><body><p id=\"pMain\">\n";
+				set htmlHead "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"generator\" content=\"tclNote\"><title>tclNote_html</title></head><body><p id=\"pMain\">\n";
 				set htmlTail "\n</p></body></html>";
-				::tclNote::fWrite $htmlPath "$htmlHead[.txtA get 1.0 end]$htmlTail";
+				::tclNote::fWrite $htmlPath "$htmlHead[regsub -all {\n} [.txtA get 1.0 end] {<br>}]$htmlTail";
 			};
 			#Event: inserting Unicode characters
 			.unicodeSeq.insertB configure -command {.txtA insert end [::tclNote::getUnicode $uniSeq];};
