@@ -65,12 +65,12 @@ namespace eval ::tclNote {
 				#file path in order to html output
 				regsub {\.[a-zA-Z0-9_]+$} $fPath {.html} htmlPath;
 				set htmlHead "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"generator\" content=\"tclNote\"><title>tclNote_html</title></head><body><p id=\"pMain\">\n";
-				set htmlTail "\n</p></body></html>";
+				set htmlTail "\n</p><footer>[clock format [clock seconds]]</footer></body></html>";
 				::tclNote::fWrite $htmlPath "$htmlHead[regsub -all {\n} [.txtA get 1.0 end] {<br>}]$htmlTail";
 			};
 			#Event: inserting Unicode characters
 			.unicodeSeq.insertB configure -command {.txtA insert end [::tclNote::getUnicode $uniSeq];};
-		return {tclNote};
+		return "\"tclNote\" on Tcl [info tclversion]";
 	};
 };
 ::tclNote::run;
