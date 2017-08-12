@@ -19,7 +19,7 @@ wm title . "tclNote";
 namespace eval ::tclNote {
 	#=== unicodeTcl_proc/unicodeTcl_proc.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/688845db196c1c2edfe3dbb88b63478b ===
 	#This function returns unicode string using given csv formatted hexadecimal numbers.
-	proc getUnicode {codes} {set u [split $codes ,];set L {};foreach el $u {lappend L [subst "\\u$el"];};return [join $L {}];};
+	proc getUnicode {codes} {set u [split $codes ,];set L {};foreach el $u {lappend L [subst "\\U$el"];};return [join $L {}];};
 	#=== file I/O functions ===
 	#== Parameters ==
  	# - fName: name of a text file or its path
