@@ -51,7 +51,9 @@ namespace eval ::tclNote {
 		grid [ttk::frame .unicodeSeq -width 10 -height 1 -borderwidth 1 -relief solid] -column 0 -row 2 -sticky ew;
 			grid [ttk::label .unicodeSeq.lbl -text {Unicode codepoints:}] -column 0 -row 0;
 			grid [ttk::entry .unicodeSeq.seq -textvariable uniSeq] -column 1 -row 0;
-			grid [ttk::button .unicodeSeq.insertB -text {Insert Unicode characters}] -column 1 -row 1 -padx 5 -pady 2;
+			grid [ttk::button .unicodeSeq.insertB -text {Insert Unicode characters}] -column 2 -row 0 -padx 5 -pady 2;
+			#** Unicode table **
+			grid [ttk::button .unicodeSeq.table -text {Unicode table}] -column 2 -row 1 -padx 5 -pady 2;
 		#****** Events ******
 			#Event: loading file
 			.fileIO.loadB configure -command {
