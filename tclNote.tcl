@@ -53,7 +53,7 @@ namespace eval ::tclNote {
 			grid [ttk::entry .unicodeSeq.seq -textvariable uniSeq] -column 1 -row 0;
 			grid [ttk::button .unicodeSeq.insertB -text {Insert Unicode characters}] -column 2 -row 0 -padx 5 -pady 2;
 			#** Unicode table **
-			grid [ttk::button .unicodeSeq.table -text {Unicode table}] -column 2 -row 1 -padx 5 -pady 2;
+			grid [ttk::button .unicodeSeq.tableB -text {Unicode table}] -column 2 -row 1 -padx 5 -pady 2;
 		#****** Events ******
 			#Event: loading file
 			.fileIO.loadB configure -command {
@@ -73,6 +73,11 @@ namespace eval ::tclNote {
 			};
 			#Event: inserting Unicode characters
 			.unicodeSeq.insertB configure -command {.txtA insert end [::tclNote::getUnicode $uniSeq];};
+			#Event: Unicode table
+			.unicodeSeq.tableB configure -command {
+				tk::toplevel .uTable;
+				wm title .uTable {Unicode character table in hexadecimals};
+			};
 		return "\"tclNote\" on Tcl [info tclversion]";
 	};
 };
