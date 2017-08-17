@@ -20,7 +20,10 @@ namespace eval ::tclNote {
 	#=== unicodeTcl_proc/unicodeTcl_proc.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/688845db196c1c2edfe3dbb88b63478b ===
 	#This function returns unicode string using given csv formatted hexadecimal numbers.
 	proc getUnicode {codes} {set u [split $codes ,];set L {};foreach el $u {lappend L [subst "\\U$el"];};return [join $L {}];};
-	#=== file I/O functions ===
+	#=== unicodeHexTable/unicodeHexTable.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/c47df3cf12a6448c8097628951ace4d4 ===
+	#It returns Unicode character table in hexadecimals.
+	proc getHexTable {hex {hex0 0}} {set table {};set v0_1 [subst "0x$hex0"];set v0_2 [subst "0x$hex"];set v1 [expr {$v0_1>$v0_2?$v0_2:$v0_1}];set v2 [expr {$v0_1>$v0_2?$v0_1:$v0_2}];while {$v1<[expr {$v2+1}]} {set h [format %x $v1];lappend table "U+$h:\[[subst "\\U$h"]\]";incr v1 1;};return $table;};
+    #=== file I/O functions ===
 	#== Parameters ==
  	# - fName: name of a text file or its path
 	# - data: string data to output
@@ -35,6 +38,18 @@ namespace eval ::tclNote {
 		set F [open $fName w];
 		puts $F $data;
 		close $F;
+	};
+    #=== Unicode table ===
+    #== Parameters ==
+ 	# - v1 and v2: hexadecimal numbers without prefix "0x"
+    #Function that returns a table
+	proc createTable {v1 v2} {
+		set V [::tclNote::getHexTable $v1 $v2];set R {};set i 0;
+		foreach x $V {
+			lappend R " $x[expr $i<15?{}:{\n}]";
+			set i [expr {$i<15?$i+1:0}];
+		}
+		return [join $R {}];
 	};
 	#=== it runs "tclNote" ===
 	proc run {} {
