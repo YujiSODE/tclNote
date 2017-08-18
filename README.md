@@ -6,7 +6,7 @@ https://github.com/YujiSODE/tclNote
 >This software is released under the MIT License.  
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
-![Screenshot of tclNote v0.2](png)  
+![Screenshot of tclNote v0.2](https://user-images.githubusercontent.com/19919184/29447368-827ec02c-842c-11e7-95d2-92ed0559280c.png)  
 **Figure 1. Screenshot of tclNote v0.2.**  
 
 
