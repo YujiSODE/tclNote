@@ -8,8 +8,8 @@ https://github.com/YujiSODE/tclNote
 ______
 ![Screenshot of tclNote v0.2](https://user-images.githubusercontent.com/19919184/29447368-827ec02c-842c-11e7-95d2-92ed0559280c.png)  
 **Figure 1. Screenshot of tclNote v0.2.**  
-![Screenshot of Screenshot of Unicode table in tclNote-v0.2](https://user-images.githubusercontent.com/19919184/29447730-2f53ea9c-842e-11e7-9418-aa16e7079193.png)  
-**Figure 2. Screenshot of Unicode table in tclNote-v0.2.**  
+![Screenshot of Screenshot of Unicode table in tclNote v0.2.1](https://user-images.githubusercontent.com/19919184/29458147-ab2e9962-8458-11e7-9272-774f592b601f.png)  
+**Figure 2. Screenshot of Unicode table in tclNote v0.2.1.**  
 
 ## Script
 It requires Tcl/Tk.
