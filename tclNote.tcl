@@ -73,14 +73,14 @@ namespace eval ::tclNote {
 			#** Unicode table **
 			grid [ttk::button .unicodeSeq.tableB -text {Unicode table}] -column 1 -row 1 -padx 5 -pady 2;
 		#****** Events ******
-			#Event: loading file
+			#[Event]: loading file
 			.fileIO.loadB configure -command {
 				.txtA delete 1.0 end;
 				.txtA insert 1.0 [::tclNote::fRead $fPath];
 			};
-			#Event: outputting text
+			#[Event]: outputting text
 			.fileIO.saveB configure -command {::tclNote::fWrite $fPath [.txtA get 1.0 end];};
-			#Event: outputting as html
+			#[Event]: outputting as html
 			.fileIO.saveHtml configure -command {
 				#$htmlPath: file path in order to html output
 				regsub {\.[a-zA-Z0-9_]+$} $fPath {} htmlPath;
@@ -89,9 +89,9 @@ namespace eval ::tclNote {
 				set htmlTail "\n</p><footer>[clock format [clock seconds]]</footer></body></html>";
 				::tclNote::fWrite $htmlPath "$htmlHead[regsub -all {\n} [.txtA get 1.0 end] {<br>}]$htmlTail";
 			};
-			#Event: inserting Unicode characters
+			#[Event]: inserting Unicode characters
 			.unicodeSeq.insertB configure -command {.txtA insert end [::tclNote::getUnicode $uniSeq];};
-			#Event: Unicode table
+			#[Event]: Unicode table
 			.unicodeSeq.tableB configure -command {
 				tk::toplevel .uTable;
 				wm title .uTable {Unicode character table in hexadecimals};
@@ -105,6 +105,21 @@ namespace eval ::tclNote {
 				#default value for the table
 				set unicHexRg {0,100};
 				.uTable.hexTable insert 1.0 {Unicode Character Table};
+				#[Event]: Unicode table; table event
+				.uTable.iOFr.b configure -command {
+					if {[info exists unicHexRg]} {
+						set x [split $unicHexRg ,];
+						set max 0;set L 0;
+						if {[llength [lindex $x 0]]>0&&[llength [lindex $x 1]]>0} {
+							set max [expr {log10(max([string length [lindex $x 0]],[string length [lindex $x 1]]))+1}];
+							#$L: calculated width for table
+							set L [expr {(6+$max)*16}];
+							.uTable.hexTable configure -width [expr {round($L)}];
+							.uTable.hexTable delete 1.0 end;
+							.uTable.hexTable insert 1.0 [::tclNote::createTable [lindex $x 0] [lindex $x 1]];
+						};
+					};
+				};
 			};
 		return "\"tclNote\" on Tcl [info tclversion]";
 	};
