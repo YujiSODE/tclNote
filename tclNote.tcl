@@ -113,7 +113,7 @@ namespace eval ::tclNote {
 						if {[llength [lindex $x 0]]>0&&[llength [lindex $x 1]]>0} {
 							set max [expr {log10(max([string length [lindex $x 0]],[string length [lindex $x 1]]))+1}];
 							#$L: calculated width for table
-							set L [expr {(6+$max)*16}];
+							set L [expr {(9+$max)*16}];
 							.uTable.hexTable configure -width [expr {round($L)}];
 							.uTable.hexTable delete 1.0 end;
 							.uTable.hexTable insert 1.0 [::tclNote::createTable [lindex $x 0] [lindex $x 1]];
