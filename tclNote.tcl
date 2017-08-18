@@ -11,6 +11,8 @@
 # - $fPath: target file path
 # - $uniSeq: csv formatted hexadecimal sequence as Unicode codepoints
 # - $htmlPath: file path in order to html output
+#== Unicode character table ==
+# - $unicHexRg: csv formatted a range of Unicode codepoints
 ##===================================================================
 set auto_noexec 1;
 package require Tk;
@@ -23,7 +25,7 @@ namespace eval ::tclNote {
 	#=== unicodeHexTable/unicodeHexTable.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/c47df3cf12a6448c8097628951ace4d4 ===
 	#It returns Unicode character table in hexadecimals.
 	proc getHexTable {hex {hex0 0}} {set table {};set v0_1 [subst "0x$hex0"];set v0_2 [subst "0x$hex"];set v1 [expr {$v0_1>$v0_2?$v0_2:$v0_1}];set v2 [expr {$v0_1>$v0_2?$v0_1:$v0_2}];while {$v1<[expr {$v2+1}]} {set h [format %x $v1];lappend table "U+$h:\[[subst "\\U$h"]\]";incr v1 1;};return $table;};
-    #=== file I/O functions ===
+	#=== file I/O functions ===
 	#== Parameters ==
  	# - fName: name of a text file or its path
 	# - data: string data to output
@@ -39,10 +41,10 @@ namespace eval ::tclNote {
 		puts $F $data;
 		close $F;
 	};
-    #=== Unicode table ===
-    #== Parameters ==
- 	# - v1 and v2: hexadecimal numbers without prefix "0x"
-    #Function that returns a table
+	#=== Unicode table ===
+	#== Parameters ==
+	# - v1 and v2: hexadecimal numbers without prefix "0x"
+	#Function that returns a table
 	proc createTable {v1 v2} {
 		set V [::tclNote::getHexTable $v1 $v2];set R {};set i 0;
 		foreach x $V {
@@ -65,10 +67,11 @@ namespace eval ::tclNote {
 		#****** (3) Unicode codepoints sequence input ******
 		grid [ttk::frame .unicodeSeq -width 10 -height 1 -borderwidth 1 -relief solid] -column 0 -row 2 -sticky ew;
 			grid [ttk::label .unicodeSeq.lbl -text {Unicode codepoints:}] -column 0 -row 0;
+			#$uniSeq: csv formatted hexadecimal sequence as Unicode codepoints
 			grid [ttk::entry .unicodeSeq.seq -textvariable uniSeq] -column 1 -row 0;
-			grid [ttk::button .unicodeSeq.insertB -text {Insert Unicode characters}] -column 2 -row 0 -padx 5 -pady 2;
+			grid [ttk::button .unicodeSeq.insertB -text {Insert Unicode characters}] -column 0 -row 1 -padx 5 -pady 2;
 			#** Unicode table **
-			grid [ttk::button .unicodeSeq.tableB -text {Unicode table}] -column 2 -row 1 -padx 5 -pady 2;
+			grid [ttk::button .unicodeSeq.tableB -text {Unicode table}] -column 1 -row 1 -padx 5 -pady 2;
 		#****** Events ******
 			#Event: loading file
 			.fileIO.loadB configure -command {
@@ -92,6 +95,16 @@ namespace eval ::tclNote {
 			.unicodeSeq.tableB configure -command {
 				tk::toplevel .uTable;
 				wm title .uTable {Unicode character table in hexadecimals};
+				#Table contents
+				grid [ttk::frame .uTable.iOFr -borderwidth 1 -relief solid] -column 0 -row 0 -sticky ew;
+					grid [ttk::label .uTable.iOFr.lbl -text {Unicode codepoints range:}] -column 0 -row 0;
+					#$unicHexRg: csv formatted a range of Unicode codepoints
+					grid [ttk::entry .uTable.iOFr.input -width 9 -textvariable unicHexRg] -column 1 -row 0;
+					grid [ttk::button .uTable.iOFr.b -text {Get Unicode Table}] -column 2 -row 0 -padx 5 -pady 2;
+				grid [tk::text .uTable.hexTable -width 100 -height 10 -wrap word] -column 0 -row 1 -sticky nw;
+				#default value for the table
+				set unicHexRg {0,100};
+				.uTable.hexTable insert 1.0 {Unicode Character Table};
 			};
 		return "\"tclNote\" on Tcl [info tclversion]";
 	};
