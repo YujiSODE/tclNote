@@ -1,6 +1,7 @@
 # tclNote
 Unicode codepoints sequence friendly text editor.  
-https://github.com/YujiSODE/tclNote
+https://github.com/YujiSODE/tclNote  
+This program uses the Unicode® Standard.
 
 >Copyright (c) 2017 Yuji SODE \<yuji.sode@gmail.com\>  
 >This software is released under the MIT License.  
@@ -18,3 +19,6 @@ It requires Tcl/Tk.
 ## Library list
 - unicodeTcl_proc/unicodeTcl_proc.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/688845db196c1c2edfe3dbb88b63478b
 - unicodeHexTable/unicodeHexTable.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/c47df3cf12a6448c8097628951ace4d4
+
+## Reference
+- Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19] and from: http://www.unicode.org/
