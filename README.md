@@ -1,7 +1,8 @@
 # tclNote
 Unicode codepoints sequence friendly text editor.  
 https://github.com/YujiSODE/tclNote  
-This program uses the Unicode® Standard.
+This program uses the Unicode® Standard.  
+Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
 
 >Copyright (c) 2017 Yuji SODE \<yuji.sode@gmail.com\>  
 >This software is released under the MIT License.  
