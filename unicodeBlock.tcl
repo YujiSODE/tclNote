@@ -1,7 +1,7 @@
 #tclNote
 #unicodeBlock.tcl
 #
-#This program uses the Unicode® Standard.
+#These code use the Unicode® Standard.
 #$unicodeBlock: an array that has Unicode® block ranges with their block name as index
 #the block names and their ranges are based on the Unicode® Standard Version 10.0.0.
 #Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
@@ -187,5 +187,53 @@ set unicodeBlock(Shavian) {10450,1047f};
 set unicodeBlock(Osmanya) {10480,104af};
 set unicodeBlock(Osage) {104b0,104ff};
 set unicodeBlock(Elbasan) {10500,1052f};
+set unicodeBlock(Caucasian_Albanian) {10530,1056f};
+set unicodeBlock(Linear_A) {10600,1077f};
+set unicodeBlock(Cypriot_Syllabary) {10800,1083f};
+set unicodeBlock(Imperial_Aramaic) {10840,1085f};
+set unicodeBlock(Palmyrene) {10860,1087f};
+set unicodeBlock(Nabataean) {10880,108af};
+set unicodeBlock(Hatran) {108e0,108ff};
+set unicodeBlock(Phoenician) {10900,1091f};
+set unicodeBlock(Lydian) {10920,1093f};
+set unicodeBlock(Meroitic_Hieroglyphs) {10980,1099f};
+set unicodeBlock(Meroitic_Cursive) {109a0,109ff};
+set unicodeBlock(Kharoshthi) {10a00,10a5f};
+set unicodeBlock(Old_South_Arabian) {10a60,10a7f};
+set unicodeBlock(Old_North_Arabian) {10a80,10a9f};
+set unicodeBlock(Manichaean) {10ac0,10aff};
+set unicodeBlock(Avestan) {10b00,10b3f};
+set unicodeBlock(Inscriptional_Parthian) {10b40,10b5f};
+set unicodeBlock(Inscriptional_Pahlavi) {10b60,10b7f};
+set unicodeBlock(Psalter_Pahlavi) {10b80,10baf};
+set unicodeBlock(Old_Turkic) {10c00,10c4f};
+set unicodeBlock(Old_Hungarian) {10c80,10cff};
+set unicodeBlock(Rumi_Numeral_Symbols) {10e60,10e7f};
+set unicodeBlock(Brahmi) {11000,1107f};
+set unicodeBlock(Kaithi) {11080,110cf};
+set unicodeBlock(Sora_Sompeng) {110d0,110ff};
+set unicodeBlock(Chakma) {11100,1114f};
+set unicodeBlock(Mahajani) {11150,1117f};
+set unicodeBlock(Sharada) {11180,111df};
+set unicodeBlock(Sinhala_Archaic_Numbers) {111e0,111ff};
+set unicodeBlock(Khojki) {11200,1124f};
+set unicodeBlock(Multani) {11280,112af};
+set unicodeBlock(Khudawadi) {112b0,112ff};
+set unicodeBlock(Grantha) {11300,1137f};
+set unicodeBlock(Newa) {11400,1147f};
+set unicodeBlock(Tirhuta) {11480,114df};
+set unicodeBlock(Siddham) {11580,115ff};
+set unicodeBlock(Modi) {11600,1165f};
+set unicodeBlock(Mongolian_Supplement) {11660,1167f};
+set unicodeBlock(Takri) {11680,116cf};
+set unicodeBlock(Ahom) {11700,1173f};
+set unicodeBlock(Warang_Citi) {118a0,118ff};
+set unicodeBlock(Zanabazar_Square) {11a00,11a4f};
+set unicodeBlock(Soyombo) {11a50,11aaf};
+set unicodeBlock(Pau_Cin_Hau) {11ac0,11aff};
+set unicodeBlock(Bhaiksuki) {11c00,11c6f};
+set unicodeBlock(Marchen) {11c70,11cbf};
+set unicodeBlock(Masaram_Gondi) {11d00,11d5f};
+set unicodeBlock(Cuneiform) {12000,123ff};
 #set unicodeBlock(***) {x,y};
 #http://www.unicode.org/charts/nameslist/
