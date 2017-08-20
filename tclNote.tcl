@@ -98,6 +98,12 @@ namespace eval ::tclNote {
 			.unicodeSeq.tableB configure -command {
 				tk::toplevel .uTable;
 				wm title .uTable {Unicode character table in hexadecimals};
+				#$unicodeBlock: an array that has Unicode block ranges with their block name as index
+				#the block names and their ranges are based on the Unicode Standard Version 10.0.0.
+				set unicodeBlock(C0_Controls_and_Basic_Latin) {0,7f};set unicodeBlock(C1_Controls_and_Latin-1_Supplement) {80,ff};set unicodeBlock(Latin_Extended-A) {100,17f};set unicodeBlock(Latin_Extended-B) {180,24f};
+				set unicodeBlock(IPA_Extensions) {250,2af};set unicodeBlock(Spacing_Modifier_Letters) {2b0,2ff};set unicodeBlock(Combining_Diacritical_Marks) {300,36f};set unicodeBlock(Greek_and_Coptic) {370,3ff};
+				set unicodeBlock(Cyrillic) {400,4ff};set unicodeBlock(Cyrillic_Supplement) {500,52f};set unicodeBlock(Armenian) {530,58f};set unicodeBlock(Hebrew) {590,5ff};set unicodeBlock(Arabic) {600,6ff};
+				set unicodeBlock(Syriac) {700,74f};set unicodeBlock(Arabic_Supplement) {750,77f};set unicodeBlock(Thaana) {780,7bf};set unicodeBlock(NKo) {7c0,7ff};
 				#Table contents
 				grid [ttk::frame .uTable.iOFr -borderwidth 1 -relief solid] -column 0 -row 0 -sticky ew;
 					grid [ttk::label .uTable.iOFr.lbl -text {Unicode codepoints range:}] -column 0 -row 0;
@@ -105,9 +111,15 @@ namespace eval ::tclNote {
 					grid [ttk::entry .uTable.iOFr.input -width 9 -textvariable unicHexRg] -column 1 -row 0;
 					grid [ttk::button .uTable.iOFr.b -text {Get Unicode Table}] -column 2 -row 0 -padx 5 -pady 2;
 				grid [tk::text .uTable.hexTable -width 100 -height 10 -wrap word] -column 0 -row 1 -sticky nw;
+				grid [ttk::combobox .uTable.cbBox -state readonly] -column 0 -row 2 -sticky ew;
 				#default value for the table
 				set unicHexRg {0,100};
 				.uTable.hexTable insert 1.0 {Unicode Character Table};
+				.uTable.cbBox configure -values [lsort [array names unicodeBlock]];
+				#[Event]: unicode table; combobox event
+				bind .uTable.cbBox <<ComboboxSelected>> {
+					set unicHexRg $unicodeBlock([.uTable.cbBox get]);
+				};
 				#[Event]: Unicode table; table event
 				.uTable.iOFr.b configure -command {
 					if {[info exists unicHexRg]} {
