@@ -7,6 +7,9 @@
 #	See LICENSE or http://opensource.org/licenses/mit-license.php
 ##===================================================================
 #Unicode codepoints sequence friendly text editor.
+#This program uses the Unicode® Standard.
+#Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
+#Reference: Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19] and from: http://www.unicode.org/
 #=== global values ===
 # - $fPath: target file path
 # - $uniSeq: csv formatted hexadecimal sequence as Unicode codepoints
