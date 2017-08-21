@@ -1,7 +1,7 @@
 #tclNote
 #unicodeBlock.tcl
 #
-#These code use the Unicode® Standard.
+#These code is compliant with the Unicode® Standard.
 #$unicodeBlock: an array that has Unicode® block ranges with their block name as index
 #the block names and their ranges are based on the Unicode® Standard Version 10.0.0.
 #Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
