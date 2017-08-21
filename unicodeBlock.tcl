@@ -1,9 +1,9 @@
 #tclNote
 #unicodeBlock.tcl
 #
-#These codes are compliant with the Unicode® Standard.
-#$unicodeBlock: an array that has Unicode® block ranges with their block name as index
-#the block names and their ranges are based on the Unicode® Standard Version 10.0.0.
+#These codes are compliant with the Unicode Standard.
+#$unicodeBlock: an array that has Unicode block ranges with their block name as index
+#the block names and their ranges are based on the Unicode Standard Version 10.0.0.
 #Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
 #Reference: Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19] and from: http://www.unicode.org/
 set unicodeBlock(C0_Controls_and_Basic_Latin) {0,7f};
