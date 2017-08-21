@@ -11,6 +11,8 @@
 #
 #Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
 #Reference: Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19] and from: http://www.unicode.org/
+#
+#Unicode character table in this editor shows only character availability in the current environment.
 #=== global values ===
 # - $fPath: target file path
 # - $uniSeq: csv formatted hexadecimal sequence as Unicode codepoints
@@ -74,7 +76,8 @@ namespace eval ::tclNote {
 			#$uniSeq: csv formatted hexadecimal sequence as Unicode codepoints
 			grid [ttk::entry .unicodeSeq.seq -textvariable uniSeq] -column 1 -row 0;
 			grid [ttk::button .unicodeSeq.insertB -text {Insert Unicode characters}] -column 0 -row 1 -padx 5 -pady 2;
-			#** Unicode table **
+			#** Unicode character table **
+			#This Unicode character table shows only character availability in the current environment
 			grid [ttk::button .unicodeSeq.tableB -text {Unicode table}] -column 1 -row 1 -padx 5 -pady 2;
 		#****** Events ******
 			#[Event]: loading file
@@ -112,7 +115,8 @@ namespace eval ::tclNote {
 					grid [ttk::entry .uTable.iOFr.input -width 9 -textvariable unicHexRg] -column 1 -row 0;
 					grid [ttk::button .uTable.iOFr.b -text {Get Unicode Table}] -column 2 -row 0 -padx 5 -pady 2;
 				grid [tk::text .uTable.hexTable -width 100 -height 10 -wrap word] -column 0 -row 1 -sticky nw;
-				grid [ttk::combobox .uTable.cbBox -state readonly] -column 0 -row 2 -sticky ew;
+				grid [ttk::label .uTable.cbBoxLbl -text {Block}] -column 0 -row 2 -sticky ew;
+				grid [ttk::combobox .uTable.cbBox -state readonly] -column 0 -row 3 -sticky ew;
 				#default value for the table
 				set unicHexRg {0,100};
 				.uTable.hexTable insert 1.0 {Unicode Character Table};
