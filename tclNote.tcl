@@ -14,7 +14,7 @@
 # - $fPath: target file path
 # - $uniSeq: csv formatted hexadecimal sequence as Unicode codepoints
 # - $htmlPath: file path in order to html output
-#== Unicode character table ==
+#== Unicode character table based on the Unicode Standard ==
 # - $unicHexRg: csv formatted a range of Unicode codepoints
 ##===================================================================
 set auto_noexec 1;
@@ -26,7 +26,7 @@ namespace eval ::tclNote {
 	#This function returns unicode string using given csv formatted hexadecimal numbers.
 	proc getUnicode {codes} {set u [split $codes ,];set L {};foreach el $u {lappend L [subst "\\U$el"];};return [join $L {}];};
 	#=== unicodeHexTable/unicodeHexTable.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/c47df3cf12a6448c8097628951ace4d4 ===
-	#It returns Unicode character table in hexadecimals.
+	#It returns Unicode character table in hexadecimals, based on the Unicode Standard Version 10.0.0.
 	proc getHexTable {hex {hex0 0}} {set table {};set v0_1 [subst "0x$hex0"];set v0_2 [subst "0x$hex"];set v1 [expr {$v0_1>$v0_2?$v0_2:$v0_1}];set v2 [expr {$v0_1>$v0_2?$v0_1:$v0_2}];while {$v1<[expr {$v2+1}]} {set h [format %x $v1];lappend table "U+$h:\[[subst "\\U$h"]\]";incr v1 1;};return $table;};
 	#=== file I/O functions ===
 	#== Parameters ==
@@ -94,10 +94,10 @@ namespace eval ::tclNote {
 			};
 			#[Event]: inserting Unicode characters
 			.unicodeSeq.insertB configure -command {.txtA insert end [::tclNote::getUnicode $uniSeq];};
-			#[Event]: Unicode table
+			#[Event]: Unicode table based on the Unicode Standard
 			.unicodeSeq.tableB configure -command {
 				tk::toplevel .uTable;
-				wm title .uTable {Unicode character table in hexadecimals};
+				wm title .uTable {Unicode character table based on the Unicode Standard};
 				#$unicodeBlock: an array that has Unicode block ranges with their block name as index
 				#the block names and their ranges are based on the Unicode Standard Version 10.0.0.
 				set unicodeBlock(C0_Controls_and_Basic_Latin) {0,7f};set unicodeBlock(C1_Controls_and_Latin-1_Supplement) {80,ff};set unicodeBlock(Latin_Extended-A) {100,17f};set unicodeBlock(Latin_Extended-B) {180,24f};
