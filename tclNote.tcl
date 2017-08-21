@@ -116,6 +116,9 @@ namespace eval ::tclNote {
 				#default value for the table
 				set unicHexRg {0,100};
 				.uTable.hexTable insert 1.0 {Unicode Character Table};
+				.uTable.hexTable insert end "\n\n#This table is based on the Unicode Standard Version 10.0.0.";
+				.uTable.hexTable insert end "\n#Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.";
+				.uTable.hexTable insert end "\n#the Unicode Consortium: http:\/\/www.unicode.org\/";
 				.uTable.cbBox configure -values [lsort [array names unicodeBlock]];
 				#[Event]: unicode table; combobox event
 				bind .uTable.cbBox <<ComboboxSelected>> {
@@ -128,6 +131,9 @@ namespace eval ::tclNote {
 						if {[llength [lindex $x 0]]>0&&[llength [lindex $x 1]]>0} {
 							.uTable.hexTable delete 1.0 end;
 							.uTable.hexTable insert 1.0 [::tclNote::createTable [lindex $x 0] [lindex $x 1]];
+							.uTable.hexTable insert end "\n\n#This table is based on the Unicode Standard Version 10.0.0.";
+							.uTable.hexTable insert end "\n#Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.";
+							.uTable.hexTable insert end "\n#the Unicode Consortium: http:\/\/www.unicode.org\/";
 						};
 					};
 				};
