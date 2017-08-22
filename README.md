@@ -7,8 +7,7 @@ Unicode character table in this editor shows only character availability in the 
 >This software is released under the MIT License.  
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 
-- **Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.**
-
+**Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.**
 - Unicode characters input by hexadecimal sequence
 - HTML output
 - Character table
