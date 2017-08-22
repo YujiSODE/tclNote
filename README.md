@@ -24,7 +24,9 @@ Unicode character table in this editor shows only character availability in the 
 - `Insert Unicode characters`: it inserts Unicode characters defined at above `Unicode codepoints`
 - `Unicode table`: it shows Unicode character table
 ### Unicode character table
-
+- `Unicode codepoints range`: csv formatted hexadecimal sequence as a range of Unicode codepoints
+- `Get Unicode Table`: show Unicode table defined at above `Unicode codepoints range`
+- `Block`: Unicode block ranges based on the Unicode Standard
 
 ## Script
 It requires Tcl/Tk.
