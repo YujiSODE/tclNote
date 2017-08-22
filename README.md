@@ -3,12 +3,15 @@ Unicode codepoints sequence friendly text editor.
 https://github.com/YujiSODE/tclNote  
 This program is compliant with the Unicode Standard.  
 Unicode character table in this editor shows only character availability in the current environment.
-
 >Copyright (c) 2017 Yuji SODE \<yuji.sode@gmail.com\>  
 >This software is released under the MIT License.  
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 
 - **Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.**
+
+- Unicode characters input by hexadecimal sequence
+- HTML output
+- Character table
 ______
 ![Screenshot of tclNote v0.2](https://user-images.githubusercontent.com/19919184/29447368-827ec02c-842c-11e7-95d2-92ed0559280c.png)  
 **Figure 1. Screenshot of tclNote v0.2.**  
