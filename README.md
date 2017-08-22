@@ -19,7 +19,10 @@ ______
 Unicode character table in this editor shows only character availability in the current environment.
 
 ## Interfaces
-
+- `File path`: file path to read or write
+- `Unicode codepoints`:
+- `Insert Unicode characters`:
+- `Unicode table`:
 
 ## Script
 It requires Tcl/Tk.
