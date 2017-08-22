@@ -20,9 +20,11 @@ Unicode character table in this editor shows only character availability in the 
 
 ## Interfaces
 - `File path`: file path to read or write
-- `Unicode codepoints`:
-- `Insert Unicode characters`:
-- `Unicode table`:
+- `Unicode codepoints`: csv formatted hexadecimal sequence as Unicode codepoints
+- `Insert Unicode characters`: it inserts Unicode characters defined at above `Unicode codepoints`
+- `Unicode table`: it shows Unicode character table
+### Unicode character table
+
 
 ## Script
 It requires Tcl/Tk.
