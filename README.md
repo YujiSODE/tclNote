@@ -14,8 +14,8 @@ Unicode character table in this editor shows only character availability in the 
 ______
 ![Screenshot of tclNote v0.2](https://user-images.githubusercontent.com/19919184/29447368-827ec02c-842c-11e7-95d2-92ed0559280c.png)  
 **Figure 1. Screenshot of tclNote v0.2.**  
-![Screenshot of Screenshot of Unicode character table in tclNote v0.4](https://user-images.githubusercontent.com/19919184/29591572-436b53e4-87da-11e7-9040-c7c7e94f160a.png)  
-**Figure 2. Screenshot of Unicode character table based on the Unicode Standard Version 10.0.0.**  
+![Screenshot of Screenshot of Unicode character table in tclNote v0.4.1](https://user-images.githubusercontent.com/19919184/29608439-1c1b2fe4-882f-11e7-8c57-cf4178d32199.png)  
+**Figure 2. Screenshot of Unicode character table.**  
 Unicode character table in this editor shows only character availability in the current environment.
 
 ## Interfaces
