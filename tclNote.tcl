@@ -121,7 +121,7 @@ namespace eval ::tclNote {
 				.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version 10.0.0.";
 				.uTable.hexTable insert end "\n#Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.";
 				.uTable.hexTable insert end "\n#the Unicode Consortium: http:\/\/www.unicode.org\/";
-				.uTable.cbBox configure -values [lsort [array names unicodeBlock]];
+				.uTable.cbBox configure -values [lsort -dictionary [array names unicodeBlock]];
 				#[Event]: unicode table; combobox event
 				bind .uTable.cbBox <<ComboboxSelected>> {
 					set unicHexRg $unicodeBlock([.uTable.cbBox get]);
