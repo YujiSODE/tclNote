@@ -74,7 +74,7 @@ namespace eval ::tclNote {
 			grid [ttk::button .fileIO.saveHtml -text {Output as html}] -column 3 -row 1 -padx 5 -pady 2;
 		#****** (2) textarea ******
 		grid [tk::text .txtA -width 40 -height 10 -wrap none] -column 0 -row 1 -sticky nw;
-		#** Font **
+		#** Font to display **
 		grid [tk::labelframe .fontLbl -text {Font}] -column 1 -row 1 -sticky ns;
 			grid [ttk::combobox .fontLbl.font -state readonly -width 20];
 			.fontLbl.font configure -values $fonts;
@@ -87,10 +87,6 @@ namespace eval ::tclNote {
 			#** Unicode character table **
 			#This Unicode character table shows only character availability in the current environment
 			grid [ttk::button .unicodeSeq.tableB -text {Unicode table}] -column 0 -row 1 -padx 5 -pady 2;
-			#** Font **
-			#grid [tk::labelframe .unicodeSeq.fontLbl -text {Font}] -column 2 -row 1 -sticky nw;
-			#	grid [ttk::combobox .unicodeSeq.fontLbl.font -state readonly -width 20];
-			#	.unicodeSeq.fontLbl.font configure -values $fonts;
 		#****** Events ******
 			#[Event]: loading file
 			.fileIO.loadB configure -command {
@@ -134,7 +130,7 @@ namespace eval ::tclNote {
 				#** Unicode block **
 				grid [ttk::labelframe .uTable.cbBoxLbl -text {Unicode Block}] -column 3 -row 0 -sticky nw;
 					grid [ttk::combobox .uTable.cbBoxLbl.cbBox -state readonly -width 30];
-				#** Font **
+				#** Font to display **
 				grid [tk::labelframe .uTable.fontLbl -text {Font}] -column 3 -row 1 -sticky nw;
 					grid [ttk::combobox .uTable.fontLbl.font -state readonly -width 20];
 				#** default value for the table **
@@ -146,12 +142,14 @@ namespace eval ::tclNote {
 				.uTable.hexTable insert end "\n#the Unicode Consortium: http:\/\/www.unicode.org\/";
 					.uTable.cbBoxLbl.cbBox configure -values [lsort -dictionary [array names unicodeBlock]];
 					.uTable.fontLbl.font configure -values $fonts;
-				#[Event]: Unicode table; Unicode block
+				#[Event]: Unicode table; Unicode block change
 				bind .uTable.cbBoxLbl.cbBox <<ComboboxSelected>> {
 					set unicHexRg $unicodeBlock([.uTable.cbBoxLbl.cbBox get]);
 				};
-				#[Event]: Unicode table; font
-				#
+				#[Event]: Unicode table; font change
+				bind .uTable.fontLbl.font <<ComboboxSelected>> {
+					.uTable.hexTable configure -font [list [.uTable.fontLbl.font get] 10];
+				};
 				#[Event]: Unicode table; table event
 				.uTable.iOFr.b configure -command {
 					if {[info exists unicHexRg]} {
