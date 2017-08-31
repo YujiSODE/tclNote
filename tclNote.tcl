@@ -100,7 +100,9 @@ namespace eval ::tclNote {
 				#$htmlPath: file path in order to html output
 				regsub {\.[a-zA-Z0-9_]+$} $fPath {} htmlPath;
 				set htmlPath "$htmlPath.html";
-				set htmlHead "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"generator\" content=\"tclNote\"><title>tclNote_html</title></head><body><p id=\"pMain\">\n";
+				#CSS
+				set cssFont [expr {[llength [.fontLbl.font get]]?"<style>\n\#pMain\{font-family:\"[.fontLbl.font get]\",monospace\;\}\n</style>":{}}];
+				set htmlHead "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"generator\" content=\"tclNote\"><title>tclNote_html</title>$cssFont</head><body><p id=\"pMain\">\n";
 				set htmlTail "\n</p><footer>[clock format [clock seconds]]</footer></body></html>";
 				::tclNote::fWrite $htmlPath "$htmlHead[regsub -all {\n} [.txtA get 1.0 end] {<br>}]$htmlTail";
 			};
