@@ -12,8 +12,8 @@ Unicode character table in this editor shows only character availability in the 
 - HTML output
 - Character table
 ______
-![Screenshot of tclNote v0.2](https://user-images.githubusercontent.com/19919184/29447368-827ec02c-842c-11e7-95d2-92ed0559280c.png)  
-**Figure 1. Screenshot of tclNote v0.2.**  
+![Screenshot of tclNote v0.5](https://user-images.githubusercontent.com/19919184/29911030-54730f72-8e67-11e7-8582-f86cc1a47853.png)  
+**Figure 1. Screenshot of tclNote v0.5.**  
 ![Screenshot of Screenshot of Unicode character table in tclNote v0.4.1](https://user-images.githubusercontent.com/19919184/29608439-1c1b2fe4-882f-11e7-8c57-cf4178d32199.png)  
 **Figure 2. Screenshot of Unicode character table.**  
 Unicode character table in this editor shows only character availability in the current environment.
