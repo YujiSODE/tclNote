@@ -1,0 +1,16 @@
+<h1>tclNote</h1>Unicode codepoints sequence friendly text editor.
+<img src="https://user-images.githubusercontent.com/19919184/29911030-54730f72-8e67-11e7-8582-f86cc1a47853.png">
+Copyright (c) 2017 Yuji SODE <yuji.sode@gmail.com>
+This software is released under the MIT License.
+See LICENSE or <a href="http://opensource.org/licenses/mit-license.php">http://opensource.org/licenses/mit-license.php</a>
+<a href="https://github.com/YujiSODE/tclNote">GitHub</a>
+<ul><li>Unicode characters input by hexadecimal sequence</li>
+<li>HTML output</li>
+<li>Character table</li>
+This program is compliant with the Unicode Standard.
+Unicode character table in this editor shows only character availability in the current environment.
+<b>Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.</b>
+<h2>Reference</h2>
+Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19] and from: http://www.unicode.org/
+
+
