@@ -32,7 +32,7 @@ Unicode character table in this editor shows only character availability in the 
 - `Font`: font to display
 
 ## Script
-It requires Tcl/Tk.
+It requires Tcl/Tk 8.6+.
 - `tclNote.tcl`
 
 ## Library list
