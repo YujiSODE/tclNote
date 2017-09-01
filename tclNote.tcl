@@ -21,7 +21,8 @@
 # - $unicHexRg: csv formatted a range of Unicode codepoints
 ##===================================================================
 set auto_noexec 1;
-package require Tk;
+package require Tcl 8.6;
+package require Tk 8.6;
 wm title . "tclNote";
 #=== namespace: tclNote ===
 namespace eval ::tclNote {
