@@ -104,7 +104,7 @@ namespace eval ::tclNote {
 				#CSS
 				set cssFont [expr {[llength [.fontLbl.font get]]?"<style type=\"text/css\">\n\#pMain\{font-family:\"[.fontLbl.font get]\",monospace\;\}\n</style>":{}}];
 				set htmlHead "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"generator\" content=\"tclNote\"><title>tclNote_html</title>$cssFont</head><body><p id=\"pMain\">\n";
-				set htmlTail "\n</p><footer>[clock format [clock seconds]]</footer></body></html>";
+				set htmlTail "\n</p><footer>[clock format [clock seconds] -gmt 1]</footer></body></html>";
 				::tclNote::fWrite $htmlPath "$htmlHead[regsub -all {\n} [.txtA get 1.0 end] {<br>}]$htmlTail";
 			};
 			#[Event]: inserting Unicode characters
