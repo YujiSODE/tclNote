@@ -40,14 +40,14 @@ namespace eval ::tclNote {
 	# - data: string data to output
 	#file input
 	proc fRead {fName} {
-		set X [read [set F [open $fName r]]];
+		set X [read -nonewline [set F [open $fName r]]];
 		close $F;
 		return $X;
 	};
 	#file output; it overrides the file: fName.
 	proc fWrite {fName data} {
 		set F [open $fName w];
-		puts $F $data;
+		puts -nonewline $F $data;
 		close $F;
 	};
 	#=== Unicode table ===
