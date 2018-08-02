@@ -1,6 +1,10 @@
 # Change Log
 
-## [1.3] - 2018-08-02
+## [Unreleased] - 2018-08-02
+## Added
+- [tclNote.tcl] line 126: `set unicodeBlock(Georgian_Extended) {1c90,1cbf};set unicodeBlock(Hanifi_Rohingya) {10d00,10d3f};set unicodeBlock(Old_Sogdian) {10f00,10f2f};set unicodeBlock(Sogdian) {10f30,10f6f};set unicodeBlock(Dogra) {11800,1184f};set unicodeBlock(Gunjala_Gondi) {11d60,11daf};set unicodeBlock(Makasar) {11ee0,11eff};set unicodeBlock(Medefaidrin) {16e40,16e9f};set unicodeBlock(Mayan_Numerals) {1d2e0,1d2ff};set unicodeBlock(Indic_Siyaq_Numbers) {1ec70,1ecbf};set unicodeBlock(Chess_Symbols) {1fa00,1fa6f};`
+- [tclNote.tcl] line 125: `#the block names and their ranges (the Unicode Standard Version 11.0.0).`
+
 ## Fixed
 - [tclNote.tcl] line 124: from `set unicodeBlock(Tangut) {17000,187ec};` to `set unicodeBlock(Tangut) {17000,187f1};`
 - [tclNote.tcl] line 124: from `set unicodeBlock(CJK_Unified_Ideographs) {4e00,9fea};` to `set unicodeBlock(CJK_Unified_Ideographs) {4e00,9fef};`
