@@ -2,7 +2,9 @@
 
 ## [1.3] - 2018-08-02
 ## Fixed
-- [tclNote.tcl] line 124: ``
+- [tclNote.tcl] line 124: from `set unicodeBlock(Tangut) {17000,187ec};` to `set unicodeBlock(Tangut) {17000,187f1};`
+- [tclNote.tcl] line 124: from `set unicodeBlock(CJK_Unified_Ideographs) {4e00,9fea};` to `set unicodeBlock(CJK_Unified_Ideographs) {4e00,9fef};`
+- [tclNote.tcl] line 124: from `set unicodeBlock(Mathematical_Operators) {2220,22ff};` to `set unicodeBlock(Mathematical_Operators) {2200,22ff};`
 
 ## Changed
 - [tclNote.tcl] line 123: `#the block names and their ranges are based on the Unicode Standard Version 10.0.0-11.0.0.`
