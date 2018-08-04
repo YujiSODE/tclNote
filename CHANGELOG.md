@@ -1,12 +1,12 @@
 # Change Log
 
-## [Unreleased] - 2018-08-04
+## [1.3] - 2018-08-04
 ## Changed
 - [tclNote.tcl] line 13: `#Reference: Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/`
 - [README.md] line 43: `- Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/`
 - [README.md] line 31: `- `Block`: Unicode block ranges based on the Unicode Standard Version 10.0.0-11.0.0.`
 
-## [Unreleased] - 2018-08-02
+## [1.3] - 2018-08-02
 ## Changed
 - [tclNote.tcl] line 166: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version 10.0.0-11.0.0.";`
 - [tclNote.tcl] line 145: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version 10.0.0-11.0.0.";`
