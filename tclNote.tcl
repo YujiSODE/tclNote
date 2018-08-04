@@ -10,7 +10,7 @@
 #This program is compliant with the Unicode Standard.
 #
 #Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.
-#Reference: Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/
+#Reference: Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/
 #
 #Unicode character table in this editor shows only character availability in the current environment.
 #=== global values ===
