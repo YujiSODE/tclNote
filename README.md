@@ -28,7 +28,7 @@ Unicode character table in this editor shows only character availability in the 
 **Unicode character table**  
 - `Unicode codepoints range`: csv formatted hexadecimal sequence as a range of Unicode codepoints
 - `Get Unicode Table`: show Unicode table defined at above `Unicode codepoints range`
-- `Block`: Unicode block ranges based on the Unicode Standard Version 10.0.0.
+- `Block`: Unicode block ranges based on the Unicode Standard Version 10.0.0-11.0.0.
 - `Font`: font to display
 
 ## Script
