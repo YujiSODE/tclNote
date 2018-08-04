@@ -1,5 +1,9 @@
 # Change Log
 
+## [Unreleased] - 2018-08-04
+## Changed
+- [README.md] line xx:
+
 ## [Unreleased] - 2018-08-02
 ## Changed
 - [tclNote.tcl] line 166: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version 10.0.0-11.0.0.";`
