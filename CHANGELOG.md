@@ -2,7 +2,7 @@
 
 ## [Unreleased] - 2018-08-04
 ## Changed
-- [README.md] line xx:
+- [README.md] line 31: `- `Block`: Unicode block ranges based on the Unicode Standard Version 10.0.0-11.0.0.`
 
 ## [Unreleased] - 2018-08-02
 ## Changed
