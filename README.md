@@ -40,4 +40,4 @@ It requires Tcl/Tk 8.6+.
 - unicodeHexTable/unicodeHexTable.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/c47df3cf12a6448c8097628951ace4d4
 
 ## Reference
-- Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/
+- Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/
