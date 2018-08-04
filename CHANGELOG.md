@@ -2,7 +2,7 @@
 
 ## [Unreleased] - 2018-08-04
 ## Changed
-- [README.md] line 43: `- Unicode, Inc. 1991-2017. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/`
+- [README.md] line 43: `- Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/`
 - [README.md] line 31: `- `Block`: Unicode block ranges based on the Unicode Standard Version 10.0.0-11.0.0.`
 
 ## [Unreleased] - 2018-08-02
