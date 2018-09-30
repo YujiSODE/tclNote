@@ -3,7 +3,7 @@ Unicode codepoints sequence friendly text editor.
 https://github.com/YujiSODE/tclNote  
 This program is compliant with the Unicode Standard.  
 Unicode character table in this editor shows only character availability in the current environment.
->Copyright (c) 2017 Yuji SODE \<yuji.sode@gmail.com\>  
+>Copyright (c) 2017-2018 Yuji SODE \<yuji.sode@gmail.com\>  
 >This software is released under the MIT License.  
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 
@@ -34,6 +34,9 @@ Unicode character table in this editor shows only character availability in the 
 ## Script
 It requires Tcl/Tk 8.6+.
 - `tclNote.tcl`
+
+- [v2.0beta+] `tclNote_unicodeBlockList.tcl`
+- [v2.0beta+] `tclNote_unicodeBlock.tcl`
 
 ## Library list
 - unicodeTcl_proc/unicodeTcl_proc.tcl (Yuji SODE,2017): the MIT License; https://gist.github.com/YujiSODE/688845db196c1c2edfe3dbb88b63478b
