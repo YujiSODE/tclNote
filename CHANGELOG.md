@@ -3,6 +3,7 @@
 ## [Unreleased] - 2018-09-30
 ## Changed
 - []
+- [LICENSE] line 3: `Copyright (c) 2017-2018 Yuji Sode`
 
 ## Added
 - [tclNote_unicodeBlockList.tcl]
