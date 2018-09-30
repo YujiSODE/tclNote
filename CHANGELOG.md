@@ -1,6 +1,9 @@
 # Change Log
 
 ## [Unreleased] - 2018-09-30
+## Removed
+- [tclNote.tcl] lines 120-126
+
 ## Changed
 - [tclNote.tcl] lines 76-79: `# - $unicodeVersion: text description for version of the Unicode Standard`  
   `variable unicodeVersion;`  
