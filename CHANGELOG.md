@@ -1,6 +1,11 @@
 # Change Log
 
 ## [Unreleased] - 2018-09-30
+## Changed
+- [tclNote.tcl] line 156: `set unicHexRg $::tclNote::unicodeBlock([.uTable.cbBoxLbl.cbBox get]);`
+- [tclNote.tcl] lines 152-153: `.uTable.cbBoxLbl.cbBox configure -values [lsort -dictionary [array names ::tclNote::unicodeBlock]];`  
+  `.uTable.fontLbl.font configure -values $::tclNote::fonts;`
+
 ## Removed
 - [tclNote.tcl] lines 120-126
 
