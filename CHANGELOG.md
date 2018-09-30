@@ -2,7 +2,15 @@
 
 ## [Unreleased] - 2018-09-30
 ## Changed
-- []
+- [tclNote.tcl] lines 32-37:`# - $unicodeVersion: text description for version of the Unicode Standard`  
+  `variable unicodeVersion {10.0.0-11.0.0};`  
+  `# - $unicodeBlock: an array that has Unicode block ranges with their block name as index`  
+  `variable unicodeBlock;array set unicodeBlock {};`  
+  `#=== loading script for Unicode block list ===`  
+  `source -encoding utf-8 ./tclNote_unicodeBlockList.tcl;`
+- [tclNote.tcl] lines 29-30: `#=== variables ===`  
+  `# - $fonts: a list of available font families`
+- [tclNote.tcl] line 4: `#	Copyright (c) 2017-2018 Yuji SODE <yuji.sode@gmail.com>`
 - [LICENSE] line 3: `Copyright (c) 2017-2018 Yuji Sode`
 
 ## Added
