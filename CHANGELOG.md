@@ -5,7 +5,8 @@
 - []
 
 ## Added
-- []
+- [tclNote_unicodeBlockList.tcl]
+- [tclNote_unicodeBlock.tcl]
 
 ## [1.3] - 2018-08-04
 ## Changed
