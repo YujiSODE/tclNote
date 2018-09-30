@@ -2,6 +2,11 @@
 
 ## [Unreleased] - 2018-09-30
 ## Changed
+- [tclNote.tcl] lines 76-79: `# - $unicodeVersion: text description for version of the Unicode Standard`  
+  `variable unicodeVersion;`  
+  `# - $unicodeBlock: an array that has Unicode block ranges with their block name as index`  
+  `variable unicodeBlock;`
+- [tclNote.tcl] line 74: `# - $fonts: a list of available font families`
 - [tclNote.tcl] lines 32-37:`# - $unicodeVersion: text description for version of the Unicode Standard`  
   `variable unicodeVersion {10.0.0-11.0.0};`  
   `# - $unicodeBlock: an array that has Unicode block ranges with their block name as index`  
