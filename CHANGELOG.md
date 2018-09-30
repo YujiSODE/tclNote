@@ -1,5 +1,12 @@
 # Change Log
 
+## [Unreleased] - 2018-09-30
+## Changed
+- []
+
+## Added
+- []
+
 ## [1.3] - 2018-08-04
 ## Changed
 - [tclNote.tcl] line 13: `#Reference: Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/`
