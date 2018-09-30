@@ -2,7 +2,8 @@
 
 ## [Unreleased] - 2018-09-30
 ## Changed
-- [README.md] lines 38-40: `- [v2.0beta+] `\`tclNote_unicodeBlockList.tcl\``
+- [README.md] lines 38-40: `- [v2.0beta+]` `tclNote_unicodeBlockList.tcl`  
+  `- [v2.0beta+]` `tclNote_unicodeBlock.tcl`
 - [README.md] line 6: `>Copyright (c) 2017-2018 Yuji SODE \<yuji.sode@gmail.com\>  `
 - [tclNote.tcl] line 156: `set unicHexRg $::tclNote::unicodeBlock([.uTable.cbBoxLbl.cbBox get]);`
 - [tclNote.tcl] lines 152-153: `.uTable.cbBoxLbl.cbBox configure -values [lsort -dictionary [array names ::tclNote::unicodeBlock]];`  
