@@ -30,7 +30,7 @@ namespace eval ::tclNote {
 	# - $fonts: a list of available font families
 	variable fonts [lsort -dictionary [font families]];
 	# - $unicodeVersion: text description for version of the Unicode Standard
-	variable unicodeVersion {10.0.0-11.0.0};
+	variable unicodeVersion {};
 	# - $unicodeBlock: an array that has Unicode block ranges with their block name as index
 	variable unicodeBlock;array set unicodeBlock {};
 	#=== loading script for Unicode block list ===
@@ -146,7 +146,7 @@ namespace eval ::tclNote {
 				set unicHexRg {0,100};
 				.uTable.hexTable insert 1.0 {Unicode Character Table};
 				.uTable.hexTable insert end "\n\n#=== This table shows only character availability in the current environment ===";
-				.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version 10.0.0-11.0.0.";
+				.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";
 				.uTable.hexTable insert end "\n#Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.";
 				.uTable.hexTable insert end "\n#the Unicode Consortium: http:\/\/www.unicode.org\/";
 					.uTable.cbBoxLbl.cbBox configure -values [lsort -dictionary [array names ::tclNote::unicodeBlock]];
@@ -167,7 +167,7 @@ namespace eval ::tclNote {
 							.uTable.hexTable delete 1.0 end;
 							.uTable.hexTable insert 1.0 [::tclNote::createTable [lindex $x 0] [lindex $x 1]];
 							.uTable.hexTable insert end "\n\n#=== This table shows only character availability in the current environment ===";
-							.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version 10.0.0-11.0.0.";
+							.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";
 							.uTable.hexTable insert end "\n#Unicode is a registered trademark of Unicode, Inc. in the United States and other countries.";
 							.uTable.hexTable insert end "\n#the Unicode Consortium: http:\/\/www.unicode.org\/";
 						};
