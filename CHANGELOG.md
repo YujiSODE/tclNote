@@ -5,9 +5,9 @@
 ## [2.0 beta] - 2018-10-04
 Changes in internal system for easily maintainable
 ## Changed
-- [tclNote.tcl] line 33: `variable unicodeVersion {};`
-- [tclNote.tcl] line 149: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";`
 - [tclNote.tcl] line 170: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";`
+- [tclNote.tcl] line 149: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";`
+- [tclNote.tcl] line 33: `variable unicodeVersion {};`
 
 ## [2.0 beta] - 2018-09-30
 Changes in internal system for easily maintainable
