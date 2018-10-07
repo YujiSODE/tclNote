@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [2.1.0] - 2018-10-07
+## Released
+
 ## [2.0 beta] - 2018-10-04
 Changes in internal system to be easily maintainable
 ## Changed
