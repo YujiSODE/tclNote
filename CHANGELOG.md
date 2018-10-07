@@ -1,5 +1,48 @@
 # Change Log
 
+## [Unreleased]
+
+## [2.0 beta] - 2018-10-04
+Changes in internal system to be easily maintainable
+## Changed
+- [tclNote.tcl] line 170: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";`
+- [tclNote.tcl] line 149: `.uTable.hexTable insert end "\n#This table is based on the Unicode Standard Version: $::tclNote::unicodeVersion.";`
+- [tclNote.tcl] line 33: `variable unicodeVersion {};`
+
+## [2.0 beta] - 2018-09-30
+Changes in internal system to be easily maintainable
+## Changed
+- [README.md] lines 38-40: `- [v2.0beta+]` `tclNote_unicodeBlockList.tcl`  
+  `- [v2.0beta+]` `tclNote_unicodeBlock.tcl`
+- [README.md] line 6: `>Copyright (c) 2017-2018 Yuji SODE \<yuji.sode@gmail.com\>  `
+- [tclNote.tcl] line 156: `set unicHexRg $::tclNote::unicodeBlock([.uTable.cbBoxLbl.cbBox get]);`
+- [tclNote.tcl] lines 152-153: `.uTable.cbBoxLbl.cbBox configure -values [lsort -dictionary [array names ::tclNote::unicodeBlock]];`  
+  `.uTable.fontLbl.font configure -values $::tclNote::fonts;`
+
+## Removed
+- [tclNote.tcl] lines 120-126
+
+## Changed
+- [tclNote.tcl] lines 76-79: `# - $unicodeVersion: text description for version of the Unicode Standard`  
+  `variable unicodeVersion;`  
+  `# - $unicodeBlock: an array that has Unicode block ranges with their block name as index`  
+  `variable unicodeBlock;`
+- [tclNote.tcl] line 74: `# - $fonts: a list of available font families`
+- [tclNote.tcl] lines 32-37:`# - $unicodeVersion: text description for version of the Unicode Standard`  
+  `variable unicodeVersion {10.0.0-11.0.0};`  
+  `# - $unicodeBlock: an array that has Unicode block ranges with their block name as index`  
+  `variable unicodeBlock;array set unicodeBlock {};`  
+  `#=== loading script for Unicode block list ===`  
+  `source -encoding utf-8 ./tclNote_unicodeBlockList.tcl;`
+- [tclNote.tcl] lines 29-30: `#=== variables ===`  
+  `# - $fonts: a list of available font families`
+- [tclNote.tcl] line 4: `#	Copyright (c) 2017-2018 Yuji SODE <yuji.sode@gmail.com>`
+- [LICENSE] line 3: `Copyright (c) 2017-2018 Yuji Sode`
+
+## Added
+- [tclNote_unicodeBlockList.tcl]
+- [tclNote_unicodeBlock.tcl]
+
 ## [1.3] - 2018-08-04
 ## Changed
 - [tclNote.tcl] line 13: `#Reference: Unicode, Inc. 1991-2018. the Unicode Consortium. derived on [2017-08-19 and 2018-08-01] and from: http://www.unicode.org/`
